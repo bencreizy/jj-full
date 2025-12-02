@@ -6,11 +6,9 @@ import Services from './components/icons/RepairServices';
 import Testimonials from './components/icons/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import VideoLandingPage from './components/VideoLandingPage'; // Import the new video landing page component
-
+import VideoLandingPage from './components/VideoLandingPage';
 
 const App: React.FC = () => {
-    // Check local storage to see if the video has already been played
     const [showVideoLanding, setShowVideoLanding] = useState(() => {
         return !localStorage.getItem('hasSeenIntroVideo');
     });
@@ -30,8 +28,8 @@ const App: React.FC = () => {
     ];
 
     const handleVideoEnd = () => {
-        localStorage.setItem('hasSeenIntroVideo', 'true'); // Set persistent flag
-        setShowVideoLanding(false); // Hide video landing and show main app
+        localStorage.setItem('hasSeenIntroVideo', 'true');
+        setShowVideoLanding(false);
     };
 
     if (showVideoLanding) {
@@ -40,10 +38,9 @@ const App: React.FC = () => {
 
     return (
         <>
-            <Header navLinks={navLinks} /> {/* Header is now at the very top */}
-            <div className="min-h-screen"> {/* Added min-h-screen here */}
-                {/* The primary logo is now managed within the Header component. This section is removed. */}
+            <Header navLinks={navLinks} />
 
+            <div>
                 <main>
                     <div ref={homeRef}><Hero contactRef={contactRef} /></div>
                     <Welcome />
@@ -51,6 +48,7 @@ const App: React.FC = () => {
                     <div ref={testimonialsRef}><Testimonials /></div>
                     <div ref={contactRef}><Contact /></div>
                 </main>
+
                 <div ref={locationRef}><Footer /></div>
             </div>
         </>
