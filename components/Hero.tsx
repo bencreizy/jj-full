@@ -16,7 +16,7 @@ const Hero: React.FC<HeroProps> = ({ contactRef }) => {
             {/* Background (icons removed) */}
             <div className="absolute inset-0 z-0"></div>
 
-            {/* Main content */}
+            {/* Main Content */}
             <div className="relative z-20 container mx-auto px-4 pt-20">
 
                 {/* Logo */}
@@ -40,7 +40,7 @@ const Hero: React.FC<HeroProps> = ({ contactRef }) => {
                     </button>
                 </div>
 
-                {/* Emergency text + Phone Number */}
+                {/* Emergency Text + Phone Number */}
                 <div className="mt-16">
                     <p
                         className="text-lg md:text-xl text-gray-300"
