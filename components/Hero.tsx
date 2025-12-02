@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ contactRef }) => {
 
     return (
         <section className="relative flex items-center justify-start text-center overflow-hidden pt-0">
-            
+
             {/* Background (icons removed) */}
             <div className="absolute inset-0 z-0"></div>
 
