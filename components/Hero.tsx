@@ -40,9 +40,12 @@ const Hero: React.FC<HeroProps> = ({ contactRef }) => {
                     </button>
                 </div>
 
-                {/* Phone Number + Emergency Text */}
+                {/* Emergency text + Phone Number */}
                 <div className="mt-16">
-                    <p className="text-lg md:text-xl text-gray-300" draggable="false">
+                    <p
+                        className="text-lg md:text-xl text-gray-300"
+                        draggable="false"
+                    >
                         24/7 EMERGENCY BREAKDOWN SERVICE
                     </p>
 
